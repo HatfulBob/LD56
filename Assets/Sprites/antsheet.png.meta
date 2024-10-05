@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,7 +108,574 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: antsheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 576
+        width: 106
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e04215051fb6bf46aaa2910b41746a4
+      internalID: -1101534108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: antsheet_1
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 576
+        width: 106
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aada6a8476612e249a8fe63a16328eda
+      internalID: -562922903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: antsheet_2
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 576
+        width: 106
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1b1271eecf4c48479119953aea50f8d
+      internalID: -2076572839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: antsheet_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 511
+        width: 106
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41dbf4983aa7ac24e9ca4ff177af41d4
+      internalID: 1284585174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: antsheet_4
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 511
+        width: 106
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd972a5e5576c2248b2e1128d2551cc2
+      internalID: 1444569555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: antsheet_5
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 511
+        width: 106
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea8de30f5b219f54a97a31672dd05307
+      internalID: -1762574805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: antsheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 446
+        width: 106
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0aeb67636891e4642b375e5f19dd7d16
+      internalID: 1590289853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: antsheet_7
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 446
+        width: 106
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45fc5f85ac733e549b44cb54de1c2c32
+      internalID: -1469589970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: antsheet_8
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 446
+        width: 106
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74fff32beb231e7439287421622adba3
+      internalID: -2004977940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: antsheet_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 381
+        width: 106
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d148dad453080a43ae68ea401d4e428
+      internalID: 2121979325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: antsheet_10
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 381
+        width: 106
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8013c6aa1c11c1249b6eee9b67cd5159
+      internalID: -2003706166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: antsheet_11
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 381
+        width: 106
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81b6131d13be4f14bb79533baee45b89
+      internalID: 935226652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: antsheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 316
+        width: 106
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f53f6d850ccf0db4d84490013a806bf9
+      internalID: 791492241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: antsheet_13
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 316
+        width: 106
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97d6b05b4c96724459f01dd1e39e97e7
+      internalID: 205781414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: antsheet_14
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 316
+        width: 106
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb9a98b11370191479e76fb8401a0c1f
+      internalID: 1355225065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: antsheet_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 251
+        width: 106
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e318fc36e9b940440a867094bc5f70e7
+      internalID: 38773331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: antsheet_16
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 251
+        width: 106
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83cd3cda3d092c441bf054fa341e3b86
+      internalID: 2044488677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: antsheet_17
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 251
+        width: 106
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c97fee923fa44c34fa8c4dce30b84ccf
+      internalID: -598926705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: antsheet_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 186
+        width: 106
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 535cb2488a0cc5343af2d988d8087051
+      internalID: 1304900387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: antsheet_19
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 186
+        width: 106
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3719deecdd0fe5499a5363f0e629f00
+      internalID: 1847330854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: antsheet_20
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 186
+        width: 106
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b01b1abdbf08dd4cac2accb513fbd80
+      internalID: 2092887075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: antsheet_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 121
+        width: 106
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 455afc43b4b9c7a4c9ef1be93c4cbba4
+      internalID: -740085232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: antsheet_22
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 121
+        width: 106
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4424125cf9822e749be61f0dfbff8752
+      internalID: 1547699041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: antsheet_23
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 121
+        width: 106
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce46e3e3b8d02ef429728b5feccbc89a
+      internalID: -1085718261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: antsheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 56
+        width: 106
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 700cbfd830535094e9191e9c741be195
+      internalID: 1216225129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: antsheet_25
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 56
+        width: 106
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79c4ea39840f1e74aad9390aaaa735fb
+      internalID: -1682113181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: antsheet_26
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 56
+        width: 106
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0a452b53a5c56144bd7e072d84ac382
+      internalID: 823528392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +686,34 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      antsheet_0: -1101534108
+      antsheet_1: -562922903
+      antsheet_10: -2003706166
+      antsheet_11: 935226652
+      antsheet_12: 791492241
+      antsheet_13: 205781414
+      antsheet_14: 1355225065
+      antsheet_15: 38773331
+      antsheet_16: 2044488677
+      antsheet_17: -598926705
+      antsheet_18: 1304900387
+      antsheet_19: 1847330854
+      antsheet_2: -2076572839
+      antsheet_20: 2092887075
+      antsheet_21: -740085232
+      antsheet_22: 1547699041
+      antsheet_23: -1085718261
+      antsheet_24: 1216225129
+      antsheet_25: -1682113181
+      antsheet_26: 823528392
+      antsheet_3: 1284585174
+      antsheet_4: 1444569555
+      antsheet_5: -1762574805
+      antsheet_6: 1590289853
+      antsheet_7: -1469589970
+      antsheet_8: -2004977940
+      antsheet_9: 2121979325
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

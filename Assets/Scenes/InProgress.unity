@@ -7096,6 +7096,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1971647429680933737, guid: 5876b9920a86ec04392eb9d2825ae99a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2417295383663828342, guid: 5876b9920a86ec04392eb9d2825ae99a, type: 3}
       propertyPath: m_Name
       value: Ant
@@ -7116,6 +7120,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.34803855
       objectReference: {fileID: 0}
+    - target: {fileID: 6345817744477805131, guid: 5876b9920a86ec04392eb9d2825ae99a, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 3127a2fcd8eddd14f934cb4338b727c2, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
