@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
@@ -21,13 +22,20 @@ public class TilePainter : MonoBehaviour
     [SerializeField] 
     private Color regularColour;
 
+    [SerializeField] private GameObject leftArrowSprite;
+    [SerializeField] private GameObject rightArrowSprite;
+    [SerializeField] private GameObject downArrowSprite;
+    [SerializeField] private GameObject upArrowSprite;
+
     private List<Vector3Int> highlightedTiles;
     // Start is called before the first frame update
 
-    private ArrowDirection currentTile = ArrowDirection.Left;
+    private ArrowDirection currentTile;
     void Start()
     {
         highlightedTiles = new List<Vector3Int>();
+        currentTile = ArrowDirection.Left;
+        leftArrowSprite.gameObject.SetActive(true);
     }
 
     // Update is called once per frame
@@ -73,13 +81,7 @@ public class TilePainter : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            currentTile = (ArrowDirection) (int)currentTile + 1;
-            if (currentTile > ArrowDirection.Up)
-            {
-                currentTile = ArrowDirection.Left;
-            }
-            
-            Debug.Log("Tile is now: " + currentTile);
+            RotateTile();
         }
 
         if (Input.GetKeyDown(KeyCode.Mouse0))
@@ -91,8 +93,9 @@ public class TilePainter : MonoBehaviour
                 var tilePosition  = tilemap.WorldToCell(hitPosition);
                 var tileInfo = tilemap.GetTile(tilePosition);
 
-                if (tileInfo.name != "GroundRule")
+                if (tileInfo.name != "GroundRule" && !tileInfo.name.ToLower().Contains("arrow"))
                 {
+                    Debug.Log("Tile name is " + tileInfo.name);
                     return;
                 }
                 
@@ -138,7 +141,57 @@ public class TilePainter : MonoBehaviour
             }
         }
     }
+
+    public void RotateTile()
+    {
+        currentTile = (ArrowDirection) (int)currentTile + 1;
+        if (currentTile > ArrowDirection.Up)
+        {
+            currentTile = ArrowDirection.Left;
+        }
+        UpdateUI(currentTile);
+    }
+
+    public void SetTile(string direction)
+    {
+        if (Enum.TryParse<ArrowDirection>(direction, true, out var arrowDirection))
+        {
+            currentTile = arrowDirection;
+            UpdateUI(arrowDirection);
+        }
+    }
+
+    private void UpdateUI(ArrowDirection direction)
+    {
+        if (direction == ArrowDirection.Down)
+        {
+            leftArrowSprite.gameObject.SetActive(false);
+            rightArrowSprite.gameObject.SetActive(false);
+            downArrowSprite.gameObject.SetActive(true);
+            upArrowSprite.gameObject.SetActive(false);
+        }else if (direction == ArrowDirection.Left)
+        {
+            leftArrowSprite.gameObject.SetActive(true);
+            rightArrowSprite.gameObject.SetActive(false);
+            downArrowSprite.gameObject.SetActive(false);
+            upArrowSprite.gameObject.SetActive(false);
+        }else if (direction == ArrowDirection.Right)
+        {
+            leftArrowSprite.gameObject.SetActive(false);
+            rightArrowSprite.gameObject.SetActive(true);
+            downArrowSprite.gameObject.SetActive(false);
+            upArrowSprite.gameObject.SetActive(false);
+        }
+        else
+        {
+            leftArrowSprite.gameObject.SetActive(false);
+            rightArrowSprite.gameObject.SetActive(false);
+            downArrowSprite.gameObject.SetActive(false);
+            upArrowSprite.gameObject.SetActive(true);
+        }
+    }
 }
+
 
 public enum ArrowDirection
 {
