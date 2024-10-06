@@ -30,7 +30,8 @@ public class Ant : MonoBehaviour
     //Animation anim;
     Animator animator;
     Vector3Int destination;
-
+    bool canMove = true;
+    LevelManager levelManager;
     public enum Direction { NORTH, SOUTH, LEFT, RIGHT }
     public enum Job { DEFAULT, PUSHER, FIGHTER }
 
@@ -44,6 +45,7 @@ public class Ant : MonoBehaviour
         tilemap = FindObjectOfType<Tilemap>();
         xPosition = (int)transform.position.x;
         yPosition = (int)transform.position.y;
+        levelManager = FindObjectOfType<LevelManager>();
     }
 
     // Update is called once per frame
@@ -53,9 +55,13 @@ public class Ant : MonoBehaviour
         yPosition = (int)(transform.position.y);
         //temporary adjustments
         if (directionFacing == Direction.SOUTH)
-            yPosition++;
+            yPosition = (int)Math.Ceiling(transform.position.y);
+        if (directionFacing == Direction.LEFT)
+            yPosition = (int)Math.Ceiling(transform.position.y);
         if (directionFacing == Direction.RIGHT)
-            xPosition--;
+            xPosition = (int)Math.Floor(transform.position.x);
+        if (directionFacing == Direction.NORTH)
+            xPosition = (int)Math.Floor(transform.position.x);
 
         if (waitPerMovementCurrent < waitPerMovement)
         {
@@ -63,9 +69,41 @@ public class Ant : MonoBehaviour
         }
         else
         {
-            //make a move
+            //check if I need to change direction
+            var tileUnderMe = tilemap.GetTile(new Vector3Int(xPosition, yPosition));
+            Debug.Log($"I am standing on {tileUnderMe.name}");
+            if (tileUnderMe.name.Contains("up"))
+            {
+                directionFacing = Direction.NORTH;
+                canMove = true;
+            }
+            else if (tileUnderMe.name.Contains("right"))
+            {
+                directionFacing = Direction.RIGHT;
+                canMove = true;
+
+            }
+            else if (tileUnderMe.name.Contains("left"))
+            {
+                directionFacing = Direction.LEFT;
+                canMove = true;
+
+            }
+            else if (tileUnderMe.name.Contains("down"))
+            {
+                directionFacing = Direction.SOUTH;
+                canMove = true;
+
+            }
             if (isMoving)
             {
+                //make a move
+                if (!canMove)
+                {
+
+                    waitPerMovementCurrent = 0;
+                    return;
+                }
                 if (xPosition == destination.x && yPosition == destination.y)
                 {
                     isMoving = false;
@@ -73,13 +111,11 @@ public class Ant : MonoBehaviour
                 }
                 else
                 {
-                    MoveCloser();
+                    MoveCloser(xPosition, yPosition);
                 }
                 waitPerMovementCurrent = 0;
             }
 
-            //check if I need to change direction
-            //TODOOOOOOOOOO
 
             //can I move?
             Vector3Int directionIWishToGo = new Vector3Int((int)transform.position.x, (int)transform.position.y);
@@ -113,20 +149,95 @@ public class Ant : MonoBehaviour
         }
     }
 
-    private void MoveCloser()
+    private void MoveCloser(int xPosition, int yPosition)
     {
         switch (directionFacing)
         {
             case Direction.LEFT:
-                transform.position = new Vector3(transform.position.x - speed, (int)transform.position.y); break;
+                transform.position = new Vector3(transform.position.x - speed, yPosition); break;
             case Direction.RIGHT:
-                transform.position = new Vector3(transform.position.x + speed, (int)transform.position.y); break;
+                transform.position = new Vector3(transform.position.x + speed, yPosition); break;
             case Direction.SOUTH:
-                transform.position = new Vector3((int)transform.position.x, transform.position.y - speed); break;
+                transform.position = new Vector3(xPosition, transform.position.y - speed); break;
             case Direction.NORTH:
-                transform.position = new Vector3((int)transform.position.x, transform.position.y + speed); break;
+                transform.position = new Vector3(xPosition, transform.position.y + speed); break;
+
         }
     }
+
+    private void OnTriggerEnter(Collider collision)
+    {
+        CollisionCode(collision);
+    }
+
+    private void OnTriggerStay(Collider collision)
+    {
+
+        CollisionCode(collision);
+    }
+
+    private void CollisionCode(Collider collision)
+    {
+        if (collision.name.Equals("Boulder"))
+        {
+            canMove = false;
+            Vector3Int directionAheadOfBoulder = new Vector3Int((int)transform.position.x, (int)transform.position.y);
+            switch (directionFacing)
+            {
+                case Direction.LEFT:
+                    directionAheadOfBoulder = new Vector3Int(xPosition - 2, yPosition); break;
+                case Direction.RIGHT:
+                    directionAheadOfBoulder = new Vector3Int(xPosition + 2, yPosition); break;
+                case Direction.SOUTH:
+                    directionAheadOfBoulder = new Vector3Int(xPosition, yPosition - 2); break;
+                case Direction.NORTH:
+                    directionAheadOfBoulder = new Vector3Int(xPosition, yPosition + 2); break;
+            }
+            if (collision.GetComponent<Boulder>().hasBeenPushed && collision.GetComponent<Boulder>().lastDirectionPushed != directionFacing)
+                return;
+            else
+            {
+                collision.GetComponent<Boulder>().hasBeenPushed = true;
+                collision.GetComponent<Boulder>().lastDirectionPushed = directionFacing;
+
+            }
+
+            var m = tilemap.GetTile(directionAheadOfBoulder);
+
+            //if (m.name.Contains("GroundRule"))
+            if (!m.name.ToLower().Contains("grass"))
+            {
+                //push boulder
+                collision.GetComponent<Collider>().transform.position = directionAheadOfBoulder;
+                isMoving = true;
+                canMove = true;
+            }
+            else
+            {
+                //its a wall, cant move
+                isMoving = false;
+            }
+
+        }
+        else if (collision.name.Contains("Ant"))
+        {
+            //its a wall, cant move
+            canMove = false;
+            isMoving = false;
+
+        }
+        else if (collision.name.Equals("Goal"))
+        {
+            levelManager.savedAnts++;
+            Destroy(this.gameObject);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        canMove = true;
+    }
+
 
     public void OnAnimationEnd()
     {

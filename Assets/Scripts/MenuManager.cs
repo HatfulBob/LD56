@@ -18,6 +18,12 @@ public class MenuManager : MonoBehaviour
 
     }
 
+
+    public void GoToLevelButton(int lvlNumber)
+    {
+        SceneManager.LoadScene($"Level{lvlNumber}");
+    }
+
     public void LevelSelectBack()
     {
         levelSelectScreen.SetActive(false);
