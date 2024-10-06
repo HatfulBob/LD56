@@ -98,7 +98,7 @@ public class Ant : MonoBehaviour
             var m = tilemap.GetTile(directionIWishToGo);
 
             //if (m.name.Contains("GroundRule"))
-            if (!m.name.Contains("35"))
+            if (!m.name.ToLower().Contains("grass"))
             {
                 destination = directionIWishToGo;
                 isMoving = true;
