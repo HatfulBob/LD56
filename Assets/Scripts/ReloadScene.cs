@@ -15,6 +15,7 @@ public class ReloadScene : MonoBehaviour
     {
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);
+        Time.timeScale = 1;
     }
 
     public void DontReload()
