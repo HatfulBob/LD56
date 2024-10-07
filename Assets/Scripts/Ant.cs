@@ -1,6 +1,7 @@
 
 using System;
 using UnityEditor.Animations;
+using UnityEditor.Tilemaps;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using static UnityEngine.RuleTile.TilingRuleOutput;
@@ -134,6 +135,11 @@ public class Ant : MonoBehaviour
             var m = tilemap.GetTile(directionIWishToGo);
 
             //if (m.name.Contains("GroundRule"))
+            if (levelManager.IsThereAnAnt(directionIWishToGo.x, directionIWishToGo.y))
+            {
+                destination = new Vector3Int((int)transform.position.x, (int)transform.position.y);
+                isMoving = false;
+            } else
             if (!m.name.ToLower().Contains("grass"))
             {
                 destination = directionIWishToGo;
@@ -219,17 +225,18 @@ public class Ant : MonoBehaviour
             }
 
         }
-        else if (collision.name.Contains("Ant"))
-        {
-            //its a wall, cant move
-            canMove = false;
-            isMoving = false;
+        //else if (collision.name.Contains("Ant"))
+        //{
+        //    //its a wall, cant move
+        //    canMove = false;
+        //    isMoving = false;
 
-        }
+        //}
         else if (collision.name.Equals("Goal"))
         {
             levelManager.savedAnts++;
-            Destroy(this.gameObject);
+            gameObject.SetActive(false);
+            //Destroy(this.gameObject);
         }
     }
 
