@@ -37,9 +37,9 @@ public class LevelManager : MonoBehaviour
         {
             if(antsSpawned< numberOfAnts)
             {
-                Instantiate(antPrefab, spawnObject.transform.position, spawnObject.transform.rotation,null);
-                antPrefab.GetComponent<Ant>().directionFacing = directionToSpawnAnts;
-                ants.Add(antPrefab.GetComponent<Ant>());
+                var obj = Instantiate(antPrefab, spawnObject.transform.position, spawnObject.transform.rotation,null);
+                obj.GetComponent<Ant>().directionFacing = directionToSpawnAnts;
+                ants.Add(obj.GetComponent<Ant>());
                 antsSpawned++;
                 timeBetweenSpawnsCurrent = 0;
             }
@@ -57,7 +57,7 @@ public class LevelManager : MonoBehaviour
 
     internal bool IsThereAnAnt(int x, int y)
     {
-        foreach (Ant ant in ants) {
+            foreach (Ant ant in ants) {
             if (ant.gameObject.activeSelf)
             {
                 if(ant.xPosition==x && ant.yPosition == y)
