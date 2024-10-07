@@ -1,10 +1,7 @@
 
 using System;
-using UnityEditor.Animations;
-using UnityEditor.Tilemaps;
 using UnityEngine;
 using UnityEngine.Tilemaps;
-using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class Ant : MonoBehaviour
 {

@@ -9,7 +9,7 @@ public class MenuManager : MonoBehaviour
     public void StartGame()
     {
         //GO TO FIRST SCENE
-        SceneManager.LoadScene("InProgress");
+        SceneManager.LoadScene("Level1");
     }
 
     public void LevelSelect()

@@ -51,7 +51,7 @@ public class LevelManager : MonoBehaviour
 
     public void NextLevelButton()
     {
-        int currentLevel = SceneManager.GetActiveScene().name.Last();
+        int currentLevel = (int)SceneManager.GetActiveScene().name.Last();
         SceneManager.LoadScene($"Level{currentLevel + 1}");
     }
 
