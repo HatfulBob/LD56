@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e878558bc25ee843a1099fbc5268d52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfAnts: 40
+  numberOfAnts: 20
   directionToSpawnAnts: 3
   antPrefab: {fileID: 2417295383663828342, guid: 5876b9920a86ec04392eb9d2825ae99a, type: 3}
   savedAnts: 0
