@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -51,7 +52,7 @@ public class LevelManager : MonoBehaviour
 
     public void NextLevelButton()
     {
-        int currentLevel = (int)SceneManager.GetActiveScene().name.Last();
+        int currentLevel = Int32.Parse(SceneManager.GetActiveScene().name.Last().ToString());
         SceneManager.LoadScene($"Level{currentLevel + 1}");
     }
 
